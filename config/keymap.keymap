@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 / {
@@ -19,7 +20,7 @@
 
         layer_0 {
             bindings = <
-&kp ESCAPE        &kp Q         &kp W             &kp E     &kp R     &kp T      &kp Y             &kp U             &kp I  &kp O           &kp P           &kp BSPC
+&lt 4 ESCAPE      &kp Q         &kp W             &kp E     &kp R     &kp T      &kp Y             &kp U             &kp I  &kp O           &kp P           &kp BSPC
 &kp TAB           &kp A         &kp S             &kp D     &kp F     &kp G      &kp H             &kp J             &kp K  &kp L           &kp MINUS       &kp ENTER
 &kp LSHFT         &kp Z         &kp X             &kp C     &kp V     &kp B      &kp LBKT          &kp RBKT          &kp N  &kp M           &kp COMMA       &kp DOT          &kp UP_ARROW  &mt RSHFT QUESTION
 &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SEMI  &kp APOS  &kp SPACE  &lt 2 LANGUAGE_2  &lt 3 LANGUAGE_1  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
@@ -55,10 +56,10 @@
 
         layer_4 {
             bindings = <
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_BLE  &out OUT_USB  &none  &none  &none  &none
+&none  &none         &none         &none         &none         &none         &none         &none         &none  &none  &none  &none
+&none  &none         &none         &none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &none
+&none  &none         &none         &none         &none         &none         &none         &none         &none  &none  &none  &none
             >;
         };
     };
