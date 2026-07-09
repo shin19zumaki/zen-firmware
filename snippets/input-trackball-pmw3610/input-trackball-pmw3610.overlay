@@ -33,10 +33,20 @@
     };
 };
 
+&zip_temp_layer {
+    excluded-positions = <
+        19 // J
+        20 // K
+        21 // L
+    >;
+
+    require-prior-idle-ms = <800>;
+};
+
 &pointing_listener {
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>,
-        <&zip_temp_layer 1 500>;
+        <&zip_temp_layer 1 10000>;
 
     scroller {
         layers = <4>;
